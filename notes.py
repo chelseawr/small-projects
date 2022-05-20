@@ -1,5 +1,13 @@
 #!/bin/python3
+import pandas as pd
 
+#Pandas
+let dict = {"2021-06": 15, "2021-05": 265}
+df = pd.DataFrame.from_dict(month_count, orient='index')
+# Rename 0 count column
+df = df.rename(columns={0: "count"})
+# Rename initial column, key
+df = df.rename_axis("month", axis="columns")
 
 # string formatting
 myName = input()
